@@ -21,14 +21,15 @@ const video = document.getElementById('video');
 const modal = document.querySelector('.modal');
 const linkdovideo = video.src;
 
+function alternarmodal(){
+    modal.classList.toggle('aberto');
+}
 botao_trailer_mario.addEventListener('click', () => {
-    modal.classList.toggle('aberto');
+    alternarmodal();
     video.setAttribute('src',linkdovideo)
-
 });
-
 botao_fechar_modal.addEventListener('click', () => {
-    modal.classList.toggle('aberto');
+    alternarmodal();
     video.setAttribute('src','');
 
 });
